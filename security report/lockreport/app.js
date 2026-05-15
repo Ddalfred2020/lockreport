@@ -1,7 +1,7 @@
 
 require("dotenv").config()
 
-const app = express()
+
 const express = require("express")
 const morgan = require("morgan")
 const mongoose = require("mongoose")
