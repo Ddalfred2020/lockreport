@@ -1,5 +1,7 @@
 
+require("dotenv").config()
 
+const app = express()
 const express = require("express")
 const morgan = require("morgan")
 const mongoose = require("mongoose")
@@ -14,13 +16,13 @@ const app = express()
 
 
 // Replace the placeholder with your Atlas connection string
-const uri ="mongodb://dbalfred:Abrahim_2026@ac-3ht7xoi-shard-00-00.lhkdals.mongodb.net:27017,ac-3ht7xoi-shard-00-01.lhkdals.mongodb.net:27017,ac-3ht7xoi-shard-00-02.lhkdals.mongodb.net:27017/db_lockreport?ssl=true&replicaSet=atlas-11d0kq-shard-0&authSource=admin&appName=Cluster0"
+const uri = process.env.MONGO_URI
 mongoose.connect(uri)
 .then(() => {
   console.log("Connected to MongoDB");
 })
 .catch(err => console.error("Error connecting to MongoDB:", err));
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
 app.set('view engine', 'ejs')
 
 
