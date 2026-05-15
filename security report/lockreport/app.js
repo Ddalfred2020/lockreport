@@ -22,7 +22,7 @@ mongoose.connect(uri)
   console.log("Connected to MongoDB");
 })
 .catch(err => console.error("Error connecting to MongoDB:", err));
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3001)
 app.set('view engine', 'ejs')
 
 
