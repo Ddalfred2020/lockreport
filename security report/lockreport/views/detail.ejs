@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <title><%= title%></title>
+  </head>
+  <body>
+    <h1 class="headerone">Wellspring College Security Lock Report</h1>
+    <div class="divmenu">
+      <p><a href="/about">ABOUT</a></p>
+      <p><a href="/create">CREATE LOCK</a></p>
+      <p><a href="/">HOME PAGE</a></p>
+    </div> 
+      <h2 class="homeh2">Lock Report Details</h2> 
+    <div class="divresult">
+      <a href="/lockreports/update/<%= result._id%>">
+       <p><%= result.title %></p>
+       <p><%= result.operative %></p>
+       <p><%= result.supervisor %></p>
+       <p><%= result.details %></p>
+       <p><%= result.taken %></p>
+       <p><%= result.advice %></p>
+      <p><%= result.recommendation %></p>
+      <p><%= result.createdAt %></p>
+      <p><%= result.updatedAt %></p>
+      </a>
+    </div>
+    <a class="delete" data-doc="<%=result._id%>">
+      <img src="/image.png" alt="Delete" class="delete-icon" />
+    </a>
+    </div>
+    <script>
+      const deletepost = document.querySelector("a.delete");
+      deletepost.addEventListener("click",(e)=>{
+        const endpoint=`/lockreports/${deletepost.dataset.doc}`
+        fetch(endpoint,{
+         method:"DELETE" 
+        })
+         .then((response)=>{response.json()
+          .then((data)=>{
+          window.location.href=data.redirect})
+         })
+         .catch(error=>{
+          console.log("error redirecting",error)
+         }) 
+      })
+      .catch(error=>{
+        console.log("error deleting report",error)
+      })
+    </script>
+  </body>
+</html>

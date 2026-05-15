@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>This is the Create Report page</title>
+  </head>
+  <body>
+    <h1 class="headerone">Wellspring College Security Lock Report</h1>
+    <div class="divmenu">
+      <p><a href="/about">ABOUT</a></p>
+      <p><a href="/create">CREATE LOCK</a></p>
+      <p><a href="/">HOME PAGE</a></p>
+    </div>
+    <div class="divform">
+      <h2 class="createh2">Create Wellspring Security Lock Report update</h2>
+      <form action="/lockreports/<%=result._id%>?_method=PUT" method="POST">
+        <label class="label1" for="operative">Security operative on duty</label>
+        <input
+          type="text"
+          class="input2"
+          id="operative"
+          name="operative"
+          value="<%=result.operative%>"
+        />
+        <br /><br />
+        <label class="label1" for="supervisor">Supervisor</label>
+        <input
+          type="text"
+          class="input2"
+          id="supervisor"
+          name="supervisor"
+          value="<%=result.supervisor%>"
+        />
+        <br /><br />
+        <label class="label1" for="details">detail of lock</label>
+        <input
+          type="text"
+          class="input2"
+          id="details"
+          value="<%=result.details%>"
+          name="details"
+        />
+        <br /><br />
+        <label class="label1" for="taken">Action taken</label>
+        <input
+          type="text"
+          class="input2"
+          id="taken"
+          name="taken"
+          value="<%=result.taken%>"
+        />
+        <br />
+        <label class="label1" for="advice">advice</label>
+        <br />
+        <textarea id="advice" name="advice" cols="10" rows="3">
+<%=result.advice%></textarea
+        >
+        <br />
+        <label class="label1" for="recommendation">Recommendations</label>
+        <br />
+        <textarea id="recommendation" name="recommendation" cols="10" rows="3">
+<%=result.recommendation%></textarea
+        >
+        <br />
+        <input class="label2" type="submit" value="Update Your Report" />
+      </form>
+    </div>
+  </body>
+</html>

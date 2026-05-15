@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <title><%=title%></title>
+  </head>
+  <body>
+    <div class="headlock">
+      <h1 class="headerone">Wellspring College Security Lock Report</h1>
+    </div>
+    <div class="divlock">
+      <% if(user){%>
+        <a href="" class="welcome">Welcome, <%=user.email%></a>
+        <a href="/logout"><button class="btn2">LOG OUT</button></a>
+      <%}else{%>
+         <a href="/login"><button class="btn2">LOGIN</button></a>
+         <a href="/signup"><button class="btn1">SIGN UP</button></a>
+     <%}%> 
+    </div>
+    <div>
+      <h2 class="homeh2">Lock Report</h2>
+    </div>
+    <br /><br />
+    <br /><br />
+    <div class="lockview">
+      <a href="/lockreports"><button>VIEW LOCK REPORTS</button></a>
+    </div>
+  </body>
+</html>

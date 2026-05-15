@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <title><%=title%></title>
+  </head>
+  <body>
+    <h1 class="headerone">Wellspring College Security Lock Report</h1>
+    <div class="divmenu">
+      <p><a href="/about">ABOUT</a></p>
+      <p><a href="/create">CREATE LOCK</a></p>
+      <p><a href="/">HOME PAGE</a></p>
+      <div class="authdiv">
+        <% if(user){%>
+        <a class="welcome" href = "">wellcome, <%=user.email%></a>  
+        <a href="/logout"><button class="btn2">LOG OUT</button></a>  
+        <%}else{%>
+        <a href="/signup"><button class="btn1">SIGN UP</button></a>
+        <a href="/login"><button class="btn2">LOGIN</button></a>
+        <%}%>
+      </div>
+    </div>
+    <div>
+      <h2 class="homeh2">Lock Report</h2>
+    </div>
+      <div class="divresult">
+        <% result.forEach((item) => { %>
+    <a href="/lockreports/<%= item._id %>">
+       <p><%= item.title %></p>
+       <p><%= item.operative %></p>
+       <p><%= item.supervisor %></p>
+       <p><%= item.details %></p>
+       <p><%= item.taken %></p>
+        <p><%= item.advice %></p>
+      <p><%= item.recommendation %></p>
+      <p><%= item.createdAt %></p>
+      <p><%= item.updatedAt %></p>
+      </a>
+         <% })%>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+.headerone {
+  font-size: 32px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+}
+
+.divmenu p {
+  display: inline-block;
+  margin: 10px 100px;
+  background-color: white;
+  color: blue;
+  white-space: nowrap;
+  padding-left: 70px;
+}
+
+.createh2 {
+  color: blue;
+}
+
+
+.headereport {
+  font-size: 18px;
+  color: blue;
+  text-align: center;
+}
+.divform {
+  text-align: center;
+}
+.homeh2 {
+  text-align: center;
+  color: blue;
+  font-size: 35px;
+}
+.headereport {
+  font-size: 25px;
+}
+.label1 {
+  color: blue;
+}
+.label2 {
+  color: blue;
+  padding: 5px;
+  margin: 10px;
+}
+header {
+  background-color: blue;
+  position:fixed
+  top: 0;
+  left: 0;
+}
+div p {
+  text-align: center;
+  color: blue;
+}
+.divresult p {
+
+  text-align: center;
+  color: blue;
+  font-size: 18px
+  ;
+
+}
+.divresult  {
+position: relative;
+  
+}
+.delete {
+  position: absolute;
+  right:200px;
+  top:200px;
+ 
+}
+.delete-icon {
+  width: 30px;
+  height: 30px; 
+}
+.delete {
+
+  border: 1px solid gray;
+}
+.formdiv{
+  width: 300px;
+  margin: 0 auto;
+  height: 350px;
+  border: 1px solid gray;
+  text-align: center;
+}
+.form-input{
+  width: 90%;
+  padding: 5px;
+  margin: 5px 0;
+}
+.button-form{
+  padding:5px 15px;
+  font-size: 14px;
+}
+.password-div{
+  text-align: left;
+  margin-left:10px
+}
+.email.error, .password.error{
+  font-size:16px;
+  color:red
+}
+.divlock  {
+  justify-content: end;
+  display: flex;
+  align-items:end;
+}
+ .btn1{
+  background-color:blue;
+  border-radius:5px;
+  margin:10px;
+  color:white;
+  cursor:pointer;
+
+}
+.btn2{
+
+  border-radius:5px;
+  margin:10px;
+  color:blue;
+  cursor:pointer;
+}
+.welcome{
+  color:blue;
+  margin-bottom:10px;
+  margin-right:10px;
+  font-size:20px;
+  text-decoration:none;
+}
+.headlock{
+  background-color:blue;
+}
+.lockview{  text-align: center;
+}
+.divmenu .authdiv{
+  display: flex;
+  justify-content: end;
+  align-items: end;
+
+}

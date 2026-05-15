@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <title>This is the Create Report page</title>
+  </head>
+  <body>
+    <h1 class="headerone">Wellspring College Security Lock Report</h1>
+    <div class="divmenu">
+      <p><a href="/about">ABOUT</a></p>
+      <p><a href="/create">CREATE LOCK</a></p>
+      <p><a href="/lockreports">HOME PAGE</a></p>
+    </div>
+    <div class="divform">
+      <h2 class="createh2">Create Wellspring Security Lock Report</h2>
+      <form action="/lockreports" method="POST">
+        <label class="label1" for="operative">Security operative on duty</label>
+        <input
+          type="text"
+          class="input2"
+          id="operative"
+          name="operative"
+          required
+        />
+        <br /><br />
+        <label class="label1" for="supervisor">Supervisor</label>
+        <input
+          type="text"
+          class="input2"
+          id="supervisor"
+          name="supervisor"
+          required
+        />
+        <br /><br />
+        <label class="label1" for="details">detail of lock</label>
+        <input
+          type="text"
+          class="input2"
+          id="details"
+          name="details"
+          required
+        />
+        <br /><br />
+        <label class="label1" for="taken">Action taken</label>
+        <input type="text" class="input2" id="taken" name="taken" required />
+        <br />
+        <label class="label1" for="advice">advice</label>
+        <br />
+        <textarea
+          name="advice"
+          id="advice"
+          cols="10"
+          rows="3"
+          name="advice"
+          required
+        ></textarea>
+        <br />
+        <label class="label1" for="recommendation">Recommendations</label>
+        <br />
+        <textarea
+          name="recommendation"
+          id="recommendation"
+          cols="10"
+          rows="3"
+          name="recommendation"
+          required
+        ></textarea>
+        <br />
+        <input class="label2" type="submit" value="Submit Your Report" />
+      </form>
+    </div>
+  </body>
+</html>
