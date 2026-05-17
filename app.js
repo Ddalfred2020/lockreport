@@ -11,7 +11,7 @@ const cookieParser = require("cookie-parser")
 const { requireAuth, checkUser} = require("./middleware/authmiddleware")
 
 const app = express()
-
+app.set("trust proxy", 1)
 
 
 // Replace the placeholder with your Atlas connection string
