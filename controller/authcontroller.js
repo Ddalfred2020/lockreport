@@ -52,11 +52,11 @@ module.exports.login_post = async (req,res)=>{
     try{
         const user = await USER.login(email, password)
          const token =  createToken(user._id)
-         const isProduction = process.env.NODE_ENV === "production"
+         
         res.cookie('jwt',token,
         {httpOnly:true,
-            secure: isProduction,
-            sameSite: isProduction ? 'none' : 'lax',
+            secure: true,
+            sameSite: 'none',
         maxAge:maxAge*1000});
         res.status(201).json({user:user._id})
     }catch(error){
@@ -74,11 +74,10 @@ module.exports.signup_post =async (req,res)=>{
  try {
      const user = await USER.create({email,password})
      const token =  createToken(user._id)
-     const isProduction = process.env.NODE_ENV === "production"
      res.cookie('jwt',token,
         {httpOnly:true,
-         secure:isProduction,
-         sameSite: isProduction,   
+         secure: true,
+         sameSite: 'none',
         maxAge:maxAge*1000});
      res.status(201).json({user:user._id})
   } catch (error) {
@@ -89,8 +88,8 @@ module.exports.signup_post =async (req,res)=>{
 }
 module.exports.logout_get = (req,res)=>{
     res.cookie('jwt','',{httpOnly:true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: process.env.NODE_ENV === "production" ? 'none' : 'lax',
+        secure: true,
+        sameSite: 'none',
         maxAge:1})
     res.redirect("/")
 }
